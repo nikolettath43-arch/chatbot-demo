@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Chatbot Demo</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 18px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid #111;
+      color: #111;
+    }
+
+    .note {
+      color: #444;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h2>Chatbot Demo</h2>
+    <p>Try the chatbot using the widget at the bottom-right corner.</p>
+
+    <p class="note">
+      When you finish, please complete this short questionnaire:
+    </p>
+
+    <a class="btn"
+       href="https://docs.google.com/forms/d/e/1FAIpQLScgbKEG0PiUkBdugJkJqChGVhQXxRkwJEHNEqIRpvSq_VaEsg/viewform"
+       target="_blank" rel="noopener noreferrer">
+      Open Questionnaire (Google Form)
+    </a>
+  </div>
+
+  <!-- Dialogflow Messenger -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+  <df-messenger
+    intent="WELCOME"
+    chat-title="Retail"
+    agent-id="11f884b5-51a5-4750-be8e-5d27416d7e23"
+    language-code="en"
+  ></df-messenger>
+
+</body>
+</html>
